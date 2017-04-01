@@ -1,4 +1,4 @@
-module Fogslode
+module Fogsplode
   def self.readme(subgem)
     File.open('README.md', 'w') do |file|
       file.write <<-README
