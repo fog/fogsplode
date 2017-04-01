@@ -4,7 +4,6 @@ module Fogsplode
     Dir.chdir(subgem)
 
     `git remote add origin git@github.com:fog/#{subgem}.git`
-    `git branch --set-upstream origin`
 
     `git commit -m "[fogsplode] init"`
   end
