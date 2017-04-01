@@ -1,5 +1,5 @@
 module Fogsplode
-  def self.travis
+  def self.travis(subgem)
     File.open('.travis.yml', 'w') do |file|
       file.write <<-TRAVIS
 language: ruby

@@ -9,7 +9,7 @@ $stdout.sync = true
 $stderr.sync = true
 
 task_dir = File.expand_path("../tasks", __FILE__)
-Dir["#{task_dir}/**/*.rake"].each do |task_file|
+Dir["\#{task_dir}/**/*.rake"].each do |task_file|
   load task_file
 end
 
@@ -30,7 +30,7 @@ namespace :test do
   mock = ENV["FOG_MOCK"] || "true"
   desc "Run tests for travis"
   task :travis do
-    sh("export FOG_MOCK=#{mock} && bundle exec shindont")
+    sh("export FOG_MOCK=\#{mock} && bundle exec shindont")
   end
 end
 TEST
